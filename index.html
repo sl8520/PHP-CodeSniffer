@@ -50,9 +50,13 @@ $</span><span class="bash"> <span class="hljs-built_in">cd</span> PSR2-YENPIN</s
 <span class="hljs-tag">&lt;<span class="hljs-name">ruleset</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"PSR2-YENPIN"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">description</span>&gt;</span>The PSR2-YENPIN coding standard.<span class="hljs-tag">&lt;/<span class="hljs-name">description</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"tab-width"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"2"</span>/&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">rule</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"PSR2"</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">rule</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"PSR2"</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- private member|method must have an underscore on the front --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">exclude</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"PSR2.Classes.PropertyDeclaration.Underscore"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">exclude</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"PSR2.Methods.MethodDeclaration.Underscore"</span>/&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">rule</span>&gt;</span>
 
-  <span class="hljs-comment">&lt;!-- private member|method must have an underscore on the front. --&gt;</span>
+  <span class="hljs-comment">&lt;!-- private member|method must have an underscore on the front --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">rule</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"PEAR.NamingConventions.ValidFunctionName.PrivateNoUnderscore"</span>/&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">rule</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"PEAR.NamingConventions.ValidVariableName.PrivateNoUnderscore"</span>/&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ruleset</span>&gt;</span>
@@ -68,12 +72,15 @@ $</span><span class="bash"> <span class="hljs-built_in">cd</span> PSR2-YENPIN</s
   <span class="hljs-tag">&lt;<span class="hljs-name">rule</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"PSR2"</span>&gt;</span>
     <span class="hljs-comment">&lt;!-- old project is not have namespace --&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">exclude</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"PSR1.Classes.ClassDeclaration.MissingNamespace"</span>/&gt;</span>
-    <span class="hljs-comment">&lt;!-- old project is not use camel case--&gt;</span>
+    <span class="hljs-comment">&lt;!-- old project is not use camel case --&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">exclude</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"PSR1.Methods.CamelCapsMethodName.NotCamelCaps"</span>/&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">exclude</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Squiz.Classes.ValidClassName.NotCamelCaps"</span>/&gt;</span>
+    <span class="hljs-comment">&lt;!-- private member|method must have an underscore on the front --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">exclude</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"PSR2.Classes.PropertyDeclaration.Underscore"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">exclude</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"PSR2.Methods.MethodDeclaration.Underscore"</span>/&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">rule</span>&gt;</span>
 
-  <span class="hljs-comment">&lt;!-- private member|method must have an underscore on the front. --&gt;</span>
+  <span class="hljs-comment">&lt;!-- private member|method must have an underscore on the front --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">rule</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"PEAR.NamingConventions.ValidFunctionName.PrivateNoUnderscore"</span>/&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">rule</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"PEAR.NamingConventions.ValidVariableName.PrivateNoUnderscore"</span>/&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ruleset</span>&gt;</span>
@@ -117,8 +124,8 @@ Time: 397ms; Memory: 10.5Mb
 </code></pre><p><font color="#c7254e"><code>phpcbf</code></font> 只能修正部分格式不符合的程式碼，其餘無法修正的部分必須手動修正。</p><h2 id="編輯器外掛"><a class="anchor hidden-xs" href="#編輯器外掛" title="編輯器外掛"><span class="octicon octicon-link"></span></a>編輯器外掛</h2><ul>
 <li><strong>Sublime Text</strong>
 <ul>
-<li><a href="https://packagecontrol.io/packages/Phpcs" target="_blank">phpcs</a></li>
-<li><a href="https://packagecontrol.io/packages/SublimeLinter-phpcs" target="_blank">SublimeLinter-phpcs</a></li>
+<li><a href="https://packagecontrol.io/packages/Phpcs" target="_blank">Phpcs</a> - phpcs、phpcbf、php-cs-fixer、phpmd 整合</li>
+<li><a href="https://packagecontrol.io/packages/SublimeLinter-phpcs" target="_blank">SublimeLinter-phpcs</a> <font color="#c7254e"><code>必須先安裝</code></font> <a href="https://packagecontrol.io/packages/SublimeLinter" target="_blank">SublimeLinter</a> <font color="#c7254e"><code>才可使用</code></font></li>
 </ul>
 </li>
 <li><strong>VSCode</strong>
@@ -133,12 +140,12 @@ Time: 397ms; Memory: 10.5Mb
                 <i class="fa fa-bars"></i>
             </a>
             <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
-                <div class="toc"><ul class="nav"><li class=""><a href="#PHP-CodeSniffer" title="PHP-CodeSniffer">PHP-CodeSniffer</a><ul class="nav"><li class=""><a href="#介紹" title="介紹">介紹</a></li><li class=""><a href="#安裝" title="安裝">安裝</a></li><li class=""><a href="#設定" title="設定">設定</a></li><li class=""><a href="#Use-Command-Line" title="Use Command Line">Use Command Line</a></li><li class=""><a href="#編輯器外掛" title="編輯器外掛">編輯器外掛</a></li></ul></li></ul></div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+                <div class="toc"><ul class="nav"><li class=""><a href="#PHP-CodeSniffer" title="PHP-CodeSniffer">PHP-CodeSniffer</a><ul class="nav"><li><a href="#介紹" title="介紹">介紹</a></li><li><a href="#安裝" title="安裝">安裝</a></li><li class=""><a href="#設定" title="設定">設定</a></li><li><a href="#Use-Command-Line" title="Use Command Line">Use Command Line</a></li><li><a href="#編輯器外掛" title="編輯器外掛">編輯器外掛</a></li></ul></li></ul></div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
             </ul>
         </div>
     </div>
     <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;"  >
-        <div class="toc"><ul class="nav"><li class=""><a href="#PHP-CodeSniffer" title="PHP-CodeSniffer">PHP-CodeSniffer</a><ul class="nav"><li class=""><a href="#介紹" title="介紹">介紹</a></li><li class=""><a href="#安裝" title="安裝">安裝</a></li><li class=""><a href="#設定" title="設定">設定</a></li><li class=""><a href="#Use-Command-Line" title="Use Command Line">Use Command Line</a></li><li class=""><a href="#編輯器外掛" title="編輯器外掛">編輯器外掛</a></li></ul></li></ul></div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+        <div class="toc"><ul class="nav"><li class=""><a href="#PHP-CodeSniffer" title="PHP-CodeSniffer">PHP-CodeSniffer</a><ul class="nav"><li><a href="#介紹" title="介紹">介紹</a></li><li><a href="#安裝" title="安裝">安裝</a></li><li class=""><a href="#設定" title="設定">設定</a></li><li><a href="#Use-Command-Line" title="Use Command Line">Use Command Line</a></li><li><a href="#編輯器外掛" title="編輯器外掛">編輯器外掛</a></li></ul></li></ul></div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
