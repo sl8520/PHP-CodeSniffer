@@ -59,6 +59,16 @@ $</span><span class="bash"> <span class="hljs-built_in">cd</span> PSR2-YENPIN</s
   <span class="hljs-comment">&lt;!-- private member|method must have an underscore on the front --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">rule</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"PEAR.NamingConventions.ValidFunctionName.PrivateNoUnderscore"</span>/&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">rule</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"PEAR.NamingConventions.ValidVariableName.PrivateNoUnderscore"</span>/&gt;</span>
+  
+  <span class="hljs-comment">&lt;!-- This sniff ensures there is one space before and after an operators --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">rule</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"Squiz.WhiteSpace.OperatorSpacing"</span>/&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">rule</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"Squiz.Strings.ConcatenationSpacing"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">properties</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"spacing"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"ignoreNewlines"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"true"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">properties</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">rule</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ruleset</span>&gt;</span>
 </code></pre><p><mark>FOR 舊專案</mark></p><p>新增自定義規則 ( 以 <font color="#c7254e"><code>PSR2</code></font> 為基準新增些許規則 &amp; 除去舊專案不需之規則 )</p><pre><code class="shell hljs"><span class="hljs-meta">$</span><span class="bash"> <span class="hljs-built_in">cd</span> C:\Users\使用者名稱\AppData\Roaming\Composer\vendor\squizlabs\php_codesniffer\src\Standards</span>
 <span class="hljs-meta">$</span><span class="bash"> mkdir PSR2-YENPIN</span>
@@ -83,6 +93,16 @@ $</span><span class="bash"> <span class="hljs-built_in">cd</span> PSR2-YENPIN</s
   <span class="hljs-comment">&lt;!-- private member|method must have an underscore on the front --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">rule</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"PEAR.NamingConventions.ValidFunctionName.PrivateNoUnderscore"</span>/&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">rule</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"PEAR.NamingConventions.ValidVariableName.PrivateNoUnderscore"</span>/&gt;</span>
+  
+  <span class="hljs-comment">&lt;!-- This sniff ensures there is one space before and after an operators --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">rule</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"Squiz.WhiteSpace.OperatorSpacing"</span>/&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">rule</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"Squiz.Strings.ConcatenationSpacing"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">properties</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"spacing"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"ignoreNewlines"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"true"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">properties</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">rule</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ruleset</span>&gt;</span>
 </code></pre><hr><p>設定編碼字符集</p><pre><code class="shell hljs"><span class="hljs-meta">$</span><span class="bash"> phpcs --config-set encoding utf-8</span>
 </code></pre><p>設定規範標準</p><pre><code class="shell hljs"><span class="hljs-meta">$</span><span class="bash"> phpcs --config-set default_standard PSR2-YENPIN</span>
