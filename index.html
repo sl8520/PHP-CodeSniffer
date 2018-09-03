@@ -148,24 +148,50 @@ Time: 397ms; Memory: 10.5Mb
 <li><a href="https://packagecontrol.io/packages/SublimeLinter-phpcs" target="_blank">SublimeLinter-phpcs</a> <font color="#c7254e"><code>必須先安裝</code></font> <a href="https://packagecontrol.io/packages/SublimeLinter" target="_blank">SublimeLinter</a> <font color="#c7254e"><code>才可使用</code></font></li>
 </ul>
 </li>
+</ul><p>設定使用自定義規則<br>
+Preferences → Package Settings → PHP Code Sniffer → Settings - User</p><pre><code class="json hljs"><span class="token punctuation">{</span>
+    <span class="token property">"phpcs_executable_path"</span><span class="token operator">:</span> <span class="token string">"phpcs.bat"</span><span class="token punctuation">,</span>
+    <span class="token property">"phpcs_additional_args"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">"--standard"</span><span class="token operator">:</span> <span class="token string">"PSR2-YENPIN"</span><span class="token punctuation">,</span>
+        <span class="token property">"-n"</span><span class="token operator">:</span> <span class="token string">""</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+    // phpcbf settings
+    <span class="token property">"phpcbf_executable_path"</span><span class="token operator">:</span> <span class="token string">"phpcbf.bat"</span><span class="token punctuation">,</span>
+    <span class="token property">"phpcbf_additional_args"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">"--standard"</span><span class="token operator">:</span> <span class="token string">"PSR2-YENPIN"</span><span class="token punctuation">,</span>
+        <span class="token property">"-n"</span><span class="token operator">:</span> <span class="token string">""</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre><ul>
 <li><strong>VSCode</strong>
 <ul>
 <li><a href="https://marketplace.visualstudio.com/items?itemName=ikappas.phpcs" target="_blank">phpcs</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=persoderlind.vscode-phpcbf" target="_blank">phpcbf</a></li>
 </ul>
 </li>
-</ul></div>
+</ul><p>設定使用自定義規則<br>
+檔案 → 喜好設定 → 設定</p><pre><code class="json hljs"><span class="token punctuation">{</span>
+    <span class="token property">"phpcs.autoConfigSearch"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"phpcs.standard"</span><span class="token operator">:</span> <span class="token string">"PSR2-YENPIN"</span><span class="token punctuation">,</span>
+
+    // phpcbf settings
+    <span class="token property">"phpcbf.executablePath"</span><span class="token operator">:</span> <span class="token string">"phpcbf.bat"</span><span class="token punctuation">,</span>
+    <span class="token property">"phpcbf.standard"</span><span class="token operator">:</span> <span class="token string">"PSR2-YENPIN"</span>
+<span class="token punctuation">}</span>
+</code></pre></div>
     <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
         <div class="pull-right dropdown">
             <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
                 <i class="fa fa-bars"></i>
             </a>
             <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
-                <div class="toc"><ul class="nav"><li class=""><a href="#PHP-CodeSniffer" title="PHP-CodeSniffer">PHP-CodeSniffer</a><ul class="nav"><li><a href="#介紹" title="介紹">介紹</a></li><li><a href="#安裝" title="安裝">安裝</a></li><li class=""><a href="#設定" title="設定">設定</a></li><li><a href="#Use-Command-Line" title="Use Command Line">Use Command Line</a></li><li><a href="#編輯器外掛" title="編輯器外掛">編輯器外掛</a></li></ul></li></ul></div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+                <div class="toc"><ul class="nav"><li class=""><a href="#PHP-CodeSniffer" title="PHP-CodeSniffer">PHP-CodeSniffer</a><ul class="nav"><li><a href="#介紹" title="介紹">介紹</a></li><li><a href="#安裝" title="安裝">安裝</a></li><li><a href="#設定" title="設定">設定</a></li><li><a href="#Use-Command-Line" title="Use Command Line">Use Command Line</a></li><li><a href="#編輯器外掛" title="編輯器外掛">編輯器外掛</a></li></ul></li></ul></div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
             </ul>
         </div>
     </div>
     <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;"  >
-        <div class="toc"><ul class="nav"><li class=""><a href="#PHP-CodeSniffer" title="PHP-CodeSniffer">PHP-CodeSniffer</a><ul class="nav"><li><a href="#介紹" title="介紹">介紹</a></li><li><a href="#安裝" title="安裝">安裝</a></li><li class=""><a href="#設定" title="設定">設定</a></li><li><a href="#Use-Command-Line" title="Use Command Line">Use Command Line</a></li><li><a href="#編輯器外掛" title="編輯器外掛">編輯器外掛</a></li></ul></li></ul></div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+        <div class="toc"><ul class="nav"><li class=""><a href="#PHP-CodeSniffer" title="PHP-CodeSniffer">PHP-CodeSniffer</a><ul class="nav"><li><a href="#介紹" title="介紹">介紹</a></li><li><a href="#安裝" title="安裝">安裝</a></li><li><a href="#設定" title="設定">設定</a></li><li class=""><a href="#Use-Command-Line" title="Use Command Line">Use Command Line</a></li><li><a href="#編輯器外掛" title="編輯器外掛">編輯器外掛</a></li></ul></li></ul></div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
