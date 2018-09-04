@@ -73,6 +73,8 @@ $</span><span class="bash"> <span class="hljs-built_in">cd</span> PSR2-YENPIN</s
   <span class="hljs-tag">&lt;/<span class="hljs-name">rule</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- One of the rules that this sniff enforces is the indent of keys in a multi-line array declaration --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">rule</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"Generic.Arrays.ArrayIndent"</span>/&gt;</span>
+  <span class="hljs-comment">&lt;!-- Bans PHP 4 style constructors --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">rule</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"Generic.NamingConventions.ConstructorName"</span>/&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ruleset</span>&gt;</span>
 </code></pre><p><mark>FOR 舊專案</mark></p><p>新增自定義規則 ( 以 <font color="#c7254e"><code>PSR2</code></font> 為基準新增些許規則 &amp; 除去舊專案不需之規則 )</p><pre><code class="shell hljs"><span class="hljs-meta">$</span><span class="bash"> <span class="hljs-built_in">cd</span> C:\Users\使用者名稱\AppData\Roaming\Composer\vendor\squizlabs\php_codesniffer\src\Standards</span>
 <span class="hljs-meta">$</span><span class="bash"> mkdir PSR2-YENPIN</span>
@@ -109,6 +111,8 @@ $</span><span class="bash"> <span class="hljs-built_in">cd</span> PSR2-YENPIN</s
   <span class="hljs-tag">&lt;/<span class="hljs-name">rule</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- One of the rules that this sniff enforces is the indent of keys in a multi-line array declaration --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">rule</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"Generic.Arrays.ArrayIndent"</span>/&gt;</span>
+  <span class="hljs-comment">&lt;!-- Bans PHP 4 style constructors --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">rule</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"Generic.NamingConventions.ConstructorName"</span>/&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ruleset</span>&gt;</span>
 </code></pre><hr><p>設定編碼字符集</p><pre><code class="shell hljs"><span class="hljs-meta">$</span><span class="bash"> phpcs --config-set encoding utf-8</span>
 </code></pre><p>設定規範標準</p><pre><code class="shell hljs"><span class="hljs-meta">$</span><span class="bash"> phpcs --config-set default_standard PSR2-YENPIN</span>
@@ -192,12 +196,12 @@ Preferences → Package Settings → PHP Code Sniffer → Settings - User</p><pr
                 <i class="fa fa-bars"></i>
             </a>
             <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
-                <div class="toc"><ul class="nav"><li class=""><a href="#PHP-CodeSniffer" title="PHP-CodeSniffer">PHP-CodeSniffer</a><ul class="nav"><li><a href="#介紹" title="介紹">介紹</a></li><li><a href="#安裝" title="安裝">安裝</a></li><li><a href="#設定" title="設定">設定</a></li><li><a href="#Use-Command-Line" title="Use Command Line">Use Command Line</a></li><li><a href="#編輯器外掛" title="編輯器外掛">編輯器外掛</a></li></ul></li></ul></div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+                <div class="toc"><ul class="nav"><li class=""><a href="#PHP-CodeSniffer" title="PHP-CodeSniffer">PHP-CodeSniffer</a><ul class="nav"><li><a href="#介紹" title="介紹">介紹</a></li><li><a href="#安裝" title="安裝">安裝</a></li><li class=""><a href="#設定" title="設定">設定</a></li><li><a href="#Use-Command-Line" title="Use Command Line">Use Command Line</a></li><li><a href="#編輯器外掛" title="編輯器外掛">編輯器外掛</a></li></ul></li></ul></div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
             </ul>
         </div>
     </div>
     <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;"  >
-        <div class="toc"><ul class="nav"><li class=""><a href="#PHP-CodeSniffer" title="PHP-CodeSniffer">PHP-CodeSniffer</a><ul class="nav"><li><a href="#介紹" title="介紹">介紹</a></li><li><a href="#安裝" title="安裝">安裝</a></li><li><a href="#設定" title="設定">設定</a></li><li class=""><a href="#Use-Command-Line" title="Use Command Line">Use Command Line</a></li><li><a href="#編輯器外掛" title="編輯器外掛">編輯器外掛</a></li></ul></li></ul></div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+        <div class="toc"><ul class="nav"><li class=""><a href="#PHP-CodeSniffer" title="PHP-CodeSniffer">PHP-CodeSniffer</a><ul class="nav"><li><a href="#介紹" title="介紹">介紹</a></li><li><a href="#安裝" title="安裝">安裝</a></li><li class=""><a href="#設定" title="設定">設定</a></li><li><a href="#Use-Command-Line" title="Use Command Line">Use Command Line</a></li><li><a href="#編輯器外掛" title="編輯器外掛">編輯器外掛</a></li></ul></li></ul></div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
