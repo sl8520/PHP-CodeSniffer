@@ -71,6 +71,21 @@ $</span><span class="bash"> <span class="hljs-built_in">cd</span> PSR2-YENPIN</s
   <span class="hljs-tag">&lt;/<span class="hljs-name">rule</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- Makes sure that any use of double quotes strings are warranted --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">rule</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"Squiz.Strings.DoubleQuoteUsage"</span>/&gt;</span>
+  <span class="hljs-comment">&lt;!-- Ensures that arrays conform to the array coding standard --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">rule</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"Squiz.Arrays.ArrayDeclaration"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">exclude</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Squiz.Arrays.ArrayDeclaration.MultiLineNotAllowed"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">exclude</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Squiz.Arrays.ArrayDeclaration.SingleLineNotAllowed"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">exclude</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Squiz.Arrays.ArrayDeclaration.KeyNotAligned"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">exclude</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Squiz.Arrays.ArrayDeclaration.ValueNotAligned"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">exclude</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Squiz.Arrays.ArrayDeclaration.CloseBraceNotAligned"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">exclude</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Squiz.Arrays.ArrayDeclaration.DoubleArrowNotAligned"</span>/&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">rule</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- Ensure there is no whitespace before/after an object operator --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">rule</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"Squiz.WhiteSpace.ObjectOperatorSpacing"</span>/&gt;</span>
+  <span class="hljs-comment">&lt;!-- Verifies that operators have valid spacing surrounding them --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">rule</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"Squiz.WhiteSpace.LogicalOperatorSpacing"</span>/&gt;</span>
+  <span class="hljs-comment">&lt;!-- Ensure there is no whitespace before a semicolon --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">rule</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"Squiz.WhiteSpace.SemicolonSpacing"</span>/&gt;</span>
   
   <span class="hljs-comment">&lt;!-- Ensures that array are indented one tab stop --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">rule</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"Generic.Arrays.ArrayIndent"</span>/&gt;</span>
@@ -114,6 +129,21 @@ $</span><span class="bash"> <span class="hljs-built_in">cd</span> PSR2-YENPIN</s
   <span class="hljs-tag">&lt;/<span class="hljs-name">rule</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- Makes sure that any use of double quotes strings are warranted --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">rule</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"Squiz.Strings.DoubleQuoteUsage"</span>/&gt;</span>
+  <span class="hljs-comment">&lt;!-- Ensures that arrays conform to the array coding standard --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">rule</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"Squiz.Arrays.ArrayDeclaration"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">exclude</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Squiz.Arrays.ArrayDeclaration.MultiLineNotAllowed"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">exclude</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Squiz.Arrays.ArrayDeclaration.SingleLineNotAllowed"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">exclude</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Squiz.Arrays.ArrayDeclaration.KeyNotAligned"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">exclude</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Squiz.Arrays.ArrayDeclaration.ValueNotAligned"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">exclude</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Squiz.Arrays.ArrayDeclaration.CloseBraceNotAligned"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">exclude</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Squiz.Arrays.ArrayDeclaration.DoubleArrowNotAligned"</span>/&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">rule</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- Ensure there is no whitespace before/after an object operator --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">rule</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"Squiz.WhiteSpace.ObjectOperatorSpacing"</span>/&gt;</span>
+  <span class="hljs-comment">&lt;!-- Verifies that operators have valid spacing surrounding them --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">rule</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"Squiz.WhiteSpace.LogicalOperatorSpacing"</span>/&gt;</span>
+  <span class="hljs-comment">&lt;!-- Ensure there is no whitespace before a semicolon --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">rule</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"Squiz.WhiteSpace.SemicolonSpacing"</span>/&gt;</span>
 
   <span class="hljs-comment">&lt;!-- Ensures that array are indented one tab stop --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">rule</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"Generic.Arrays.ArrayIndent"</span>/&gt;</span>
